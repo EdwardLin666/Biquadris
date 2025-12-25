@@ -1,0 +1,38 @@
+In module Player, imported at player-impl.cc:1:
+player.cc: In constructor ‘Player@Player::Player()’:
+player.cc:20:9: warning: ‘Player@Player::currentBlockLevel’ will be initialized after [-Wreorder]
+   20 |     int currentBlockLevel;
+      |         ^~~~~~~~~~~~~~~~~
+player.cc:17:10: warning:   ‘char Player@Player::lastLockedBlockType’ [-Wreorder]
+   17 |     char lastLockedBlockType = ' ';
+      |          ^~~~~~~~~~~~~~~~~~~
+player-impl.cc:2784205:1: warning:   when initialized here [-Wreorder]
+In module Player, imported at player-impl.cc:1:
+player.cc: In constructor ‘Player@Player::Player(int, const std::string&)’:
+player.cc:20:9: warning: ‘Player@Player::currentBlockLevel’ will be initialized after [-Wreorder]
+   20 |     int currentBlockLevel;
+      |         ^~~~~~~~~~~~~~~~~
+player.cc:17:10: warning:   ‘char Player@Player::lastLockedBlockType’ [-Wreorder]
+   17 |     char lastLockedBlockType = ' ';
+      |          ^~~~~~~~~~~~~~~~~~~
+player-impl.cc:2784213:1: warning:   when initialized here [-Wreorder]
+In module GameController, imported at gamecontroller-impl.cc:1:
+gamecontroller.cc: In constructor ‘GameController@GameController::GameController(Player@Player*, Player@Player*, CommandInterpreter@CommandInterpreter*, int, Display@Display*)’:
+gamecontroller.cc:861302:9: warning: ‘GameController@GameController::randomSeed’ will be initialized after [-Wreorder]
+gamecontroller.cc:861298:14: warning:   ‘Display@Display* GameController@GameController::display’ [-Wreorder]
+gamecontroller-impl.cc:2514077:1: warning:   when initialized here [-Wreorder]
+gamecontroller-impl.cc: At global scope:
+gamecontroller-impl.cc:2514151:32: error: virt-specifiers in ‘restart’ not allowed outside a class definition
+gamecontroller-impl.cc:2514229:33: error: virt-specifiers in ‘moveLeft’ not allowed outside a class definition
+gamecontroller-impl.cc:2514266:34: error: virt-specifiers in ‘moveRight’ not allowed outside a class definition
+gamecontroller-impl.cc:2514302:33: error: virt-specifiers in ‘rotateCW’ not allowed outside a class definition
+gamecontroller-impl.cc:2514325:34: error: virt-specifiers in ‘rotateCCW’ not allowed outside a class definition
+gamecontroller-impl.cc:2514349:33: error: virt-specifiers in ‘moveDown’ not allowed outside a class definition
+gamecontroller-impl.cc:2514362:29: error: virt-specifiers in ‘drop’ not allowed outside a class definition
+gamecontroller-impl.cc:2514382:32: error: virt-specifiers in ‘levelUp’ not allowed outside a class definition
+gamecontroller-impl.cc:2514390:34: error: virt-specifiers in ‘levelDown’ not allowed outside a class definition
+gamecontroller-impl.cc:2514398:62: error: virt-specifiers in ‘executeSequence’ not allowed outside a class definition
+gamecontroller-impl.cc:2514420:58: error: virt-specifiers in ‘replaceCurrentBlock’ not allowed outside a class definition
+gamecontroller-impl.cc:2514425:58: error: virt-specifiers in ‘setNoRandom’ not allowed outside a class definition
+gamecontroller-impl.cc:2514435:34: error: virt-specifiers in ‘setRandom’ not allowed outside a class definition
+make: *** [Makefile:98: gamecontroller-impl.o] Error 1

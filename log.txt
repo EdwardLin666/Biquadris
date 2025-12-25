@@ -1,0 +1,11 @@
+nov 22:
+    A edward:
+        wrote board.cc
+            implemented the class of board
+        wrote block.cc
+            basic skeleton of block
+
+nov 23:
+
+
+nov 24:
